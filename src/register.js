@@ -31,7 +31,7 @@ class Register extends Component {
 
   handleChange(event) {
     console.log(event.target.name)
-    if (event.target.name == 'topic') {
+    if (event.target.name === 'topic') {
       this.setState({
         [event.target.name]: event.target.options[event.target.selectedIndex].value,
       });
