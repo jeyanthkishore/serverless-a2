@@ -1,7 +1,6 @@
 //The author of this file is Jeyanth Kishore Ramasamy(B00875285)
 import { React } from "react";
 import { Component } from "react";
-import { Select } from "react-bootstrap";
 import {
   MDBContainer,
   MDBRow,
@@ -13,7 +12,7 @@ import {
   MDBCardHeader,
 } from "mdbreact";
 import validator from "validator";
-import "../src/register.css";
+import "./register.css";
 import axios from "axios";
 import Swal from 'sweetalert2'
 

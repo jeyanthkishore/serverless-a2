@@ -1,5 +1,5 @@
 //The author of this file is Jeyanth Kishore Ramasamy(B00875285)
-import "../src/login.css";
+import "./login.css";
 import React, { Component } from "react";
 import {
   MDBContainer,

@@ -4,7 +4,7 @@ import { Component } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2'
 import jwt_decode from "jwt-decode";
-import "../src/homepage.css";
+import "./homepage.css";
 const token = localStorage.access_token;
 const decoded = jwt_decode(token);
 
