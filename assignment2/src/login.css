@@ -1,0 +1,22 @@
+.login-container {
+  position: relative;
+  max-width: 65%;
+  padding-bottom: 1.5rem;
+  margin-left: 15.5rem;
+  margin-right: auto;
+  margin-top: 9rem;
+}
+
+.login-container .card {
+  width: 26rem;
+}
+
+.card .card-header {
+  border-bottom-color: linear-gradient(to bottom right, #ffce00, #fe4880);
+  background-color: #343a40;
+  color: white;
+}
+.btn-default {
+  color: #fff;
+  background-color: #343a40 !important;
+}

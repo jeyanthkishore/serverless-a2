@@ -1,0 +1,17 @@
+#display_name {
+  position: relative;
+  top: 4rem;
+  left: 20rem;
+}
+
+#user {
+  position: relative;
+  top: 7rem;
+  left: 30rem;
+}
+
+#logout {
+  position: relative;
+  top: 15rem;
+  left: 30rem;
+}
