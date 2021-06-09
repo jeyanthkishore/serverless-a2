@@ -10,12 +10,15 @@ class Register extends Component {
   constructor(props) {
     const token = localStorage.access_token;
     const decoded = jwt_decode(token);
+    console.log(token)
+    console.log(decoded)
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
       users: [],
       decode:decoded,
     };
+    console.log(this.state)
     }
     
    async componentDidMount() {
@@ -25,8 +28,10 @@ class Register extends Component {
           this.setState({
               users: response.data.list,
           })
+        console.log("working111");
+        console.log(this.state);
         this.state.users.forEach(element => {
-            if (element.email !== this.state.decode.decoded.email) {
+            if (element.email !== this.state.decode.email) {
                 var display = document.getElementById("user");
                 var user = document.createElement("div");
                 user.innerHTML = element.email;
@@ -44,7 +49,7 @@ class Register extends Component {
   handleClick(event) {
       event.preventDefault();
       const data = {
-      email: this.state.decode.decoded.email,
+      email: this.state.decode.email,
     };
      axios
       .post("http://localhost:8081/logout", data)
@@ -63,8 +68,8 @@ class Register extends Component {
   render() {
     return (
     <div class="homepage">
-      <div id="display_name"><h1>Welcome {this.state.decode.decoded.name}</h1></div>
-      <h2 id="user" class="center">Other online users:</h2>
+      <div id="display_name"><h1>Welcome {this.state.decode.name}</h1></div>
+      <h2 id="user">Other online users:</h2>
       <button id="logout"onClick={this.handleClick}>Logout</button>
     </div>
     
