@@ -75,7 +75,7 @@ class Register extends Component {
     };
     console.log("Check")
     await axios
-      .post("http:localhost:5010/register", register)
+      .post("http://localhost:5010/register", register)
       .then((response) => {
         Swal.fire("Registration Successfull");
         this.props.history.push("/login");
